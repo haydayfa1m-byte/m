@@ -1,0 +1,130 @@
+/* ------------------------------------- */
+/* تنسيقات خاصة بصفحة main.html          */
+/* ------------------------------------- */
+
+/* 1. الخلفية الداكنة وتنسيق BODY */
+body {
+    /* ضمان الخلفية الداكنة لكامل الصفحة */
+    background-image: none !important; 
+    background-color: #1E2329 !important; 
+    color: #FFFFFF !important; 
+    height: auto !important;
+    min-height: 100vh;
+}
+
+/* ------------------------------------- */
+/* 2. تنسيقات شريط التنقل (العنوان مكانه الصحيح) */
+/* ------------------------------------- */
+
+.main-header {
+    background-color: #161A1E;
+    overflow: hidden; 
+    padding: 15px 30px;
+    border-bottom: 1px solid #333;
+    direction: rtl; 
+}
+
+.main-header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FCD535; 
+    float: left; /* العنوان في أقصى اليسار */
+}
+
+.main-nav {
+    float: right; /* الروابط على اليمين */
+    margin-right: 40px; 
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #DDDDDD; 
+    margin: 0 15px;
+    font-size: 16px;
+    display: inline-block; 
+    padding: 5px 0;
+}
+
+/* ------------------------------------- */
+/* 3. تنسيقات شبكة البطاقات (4 أعمدة × صفين) */
+/* ------------------------------------- */
+
+.content-wrapper {
+    padding: 40px 30px;
+    max-width: 1400px;
+    margin: 0 auto; 
+    overflow: hidden; 
+}
+
+.main-grid {
+    overflow: hidden; 
+    margin-top: 15px;
+}
+
+.grid-card {
+    /* 4 أعمدة في كل صف (float بسيط) */
+    float: right; 
+    width: 23.5%; /* عرض البطاقة */
+    margin-right: 1%; /* مسافة بين كل بطاقة */
+    margin-bottom: 15px; 
+   
+    background-color: #2D333B; 
+    border: 3px solid #444;
+    padding: 25px; 
+    border-radius: 20px;
+    height: 130px; /* ارتفاع ثابت ومتساوٍ */
+    color: #FFFFFF;
+    
+    /* توسيط المحتوى الداخلي */
+    display: table-cell;
+    vertical-align: middle; 
+    text-align: center;
+}
+
+/* إلغاء الهامش الأيمن للبطاقة الرابعة والثامنة لضمان 4 أعمدة متساوية */
+.grid-card:nth-child(4n) {
+    margin-right: 0; 
+}
+
+.grid-card p {/*inside box*/
+    margin: 5px 0;
+    line-height: 1.3;
+    font-size: 13px;
+   
+}
+
+/* تنظيف الـ float */
+.clear-float {
+    clear: both;
+}
+
+/* ------------------------------------- */
+/* 4. تنسيقات شريط النصيحة (مُوسَّط) */
+/* ------------------------------------- */
+
+.tip-footer {
+    background-color: #0B0E11; 
+    color: #FCD535; 
+    text-align: center; /* توسيط النص */
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-top: 3px solid #FCD535; 
+    margin-top: 40px; 
+}
+/* تنسيق الروابط داخل بطاقات التداول */
+.grid-card a {
+    color: #f9f7f0; /* لون أصفر فاتح (مثل الشعار) لجعله بارزاً */
+    text-decoration: none; /* لإزالة الخط الأزرق تحت الكلمة */
+    display: block; /* لجعله يأخذ سطراً جديداً ويسهل تنسيقه */
+    margin-top: 8px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.grid-card a:hover {
+    background-color: #FCD535; /* تأثير عند المرور بالماوس */
+    color: #1E2329; /* لون النص يصبح داكناً */
+}
